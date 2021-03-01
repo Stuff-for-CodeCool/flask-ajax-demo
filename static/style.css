@@ -1,0 +1,37 @@
+:root {
+    --bg: #ddd;
+    --text: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #333;
+        --text: #ddd;
+    }
+}
+
+html {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px / 1.6 sans-serif;
+}
+
+form,
+table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+button {
+    margin-top: 1rem;
+}
+
+section {
+    margin-bottom: 1em;
+}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section>
+    <form action="/" method="POST">
+        <label>Ala</label>
+        <input type="text" name="ala">
+        
+        <label>Bala</label>
+        <input type="text" name="bala">
+        
+        <label>Portocala</label>
+        <textarea name="portocala"></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+{% if data %}
+<section>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ala</th>
+                <th>Bala</th>
+                <th>Portocala</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <th>{{ row.id }}</th>
+                <td>{{ row.ala }}</td>
+                <td>{{ row.bala }}</td>
+                <td>{{ row.portocala }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endif %}
+
+{% endblock %}
